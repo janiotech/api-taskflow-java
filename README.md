@@ -67,3 +67,5 @@ dica: caso já tenha usado o comando acima e não queira rebuildar seu projeto u
 ```bash
 docker-compose up -d
 ```
+
+test remove push directed to branch main
