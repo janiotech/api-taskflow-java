@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class User {
+    private Long id;
     private String name;
     private LocalDate birth;
     private String gender;
@@ -22,6 +23,10 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+    }
+
+    public Long getId() {
+        return this.id;
     }
 
     public String getName() {
