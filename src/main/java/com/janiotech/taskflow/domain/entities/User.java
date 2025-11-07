@@ -17,6 +17,8 @@ public class User {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    public User(){}
+
     public User(String name, BirthDate birth, String gender, String phone, String username, String email, String password){
         this.name = name;
         this.birth = birth;
