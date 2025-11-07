@@ -1,12 +1,14 @@
 package com.janiotech.taskflow.domain.entities;
 
+import com.janiotech.taskflow.domain.valueobjects.BirthDate;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class User {
     private Long id;
     private String name;
-    private LocalDate birth;
+    private BirthDate birth;
     private String gender;
     private String phone;
     private String username;
@@ -15,7 +17,7 @@ public class User {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public User( String name, LocalDate birth, String gender, String phone, String username, String email, String password){
+    public User(String name, BirthDate birth, String gender, String phone, String username, String email, String password){
         this.name = name;
         this.birth = birth;
         this.gender = gender;
@@ -37,11 +39,11 @@ public class User {
         this.name = name;
     }
 
-    public LocalDate getBirth() {
+    public BirthDate getBirth() {
         return birth;
     }
 
-    public void setBirth(LocalDate birth) {
+    public void setBirth(BirthDate birth) {
         this.birth = birth;
     }
 
