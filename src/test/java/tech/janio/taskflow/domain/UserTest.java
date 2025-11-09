@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Domain Entity User Test")
 public class UserTest {
