@@ -8,13 +8,16 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @DisplayName("Domain Entity User Test")
 public class UserTest {
     @Test
     public void BirthDateUserTest(){
         User user = new User();
-        user.setBirth(new BirthDate(LocalDate.of(2012,2,2)));
+        LocalDate dateTest = LocalDate.of(2012,2,2);
+        user.setBirth(new BirthDate(dateTest));
+        assertNotNull(dateTest);
         assertEquals(13, user.getBirth().getAge());
     }
 }
