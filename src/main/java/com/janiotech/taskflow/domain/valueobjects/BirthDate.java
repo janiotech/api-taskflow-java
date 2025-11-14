@@ -1,8 +1,12 @@
 package com.janiotech.taskflow.domain.valueobjects;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public record BirthDate(LocalDate value) {
+    private static final int MINIMUM_AGE = 13;
+
     public BirthDate{
         if(value == null){
             throw new IllegalArgumentException("Birth date cannot be null");
@@ -15,7 +19,28 @@ public record BirthDate(LocalDate value) {
         }
     }
 
+    @Override
+    public String toString() {
+        return value.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    private static int getAge(LocalDate date) {
+        return Period.between(date, LocalDate.now()).getYears();
+    }
+
     public int getAge(){
-        return LocalDate.now().getYear() - value.getYear();
+        return getAge(value);
+    }
+
+    public int getYear(){
+        return value.getYear();
+    }
+
+    public int 	getDayOfMonth(){
+        return value.getDayOfMonth();
+    }
+
+    public int getMonthValue(){
+        return value.getMonthValue();
     }
 }
