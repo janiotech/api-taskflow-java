@@ -11,7 +11,7 @@ Uma API de gerenciamento de tarefas (to-do list) com autenticação JWT, endpoin
 | Backend        | Java 25, Spring Boot 3, Gradle                   |
 | Banco de Dados | PostgreSQL                                       |
 | Frontend       | React.js/Flutter (não incluso neste repositório) |
-| Testes         | JUnit (em construção)                            |
+| Testes         | JUnit                            |
 ---
 
 ## ⚙️ Como Rodar o Projeto Localmente
