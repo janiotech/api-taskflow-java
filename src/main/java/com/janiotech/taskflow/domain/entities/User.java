@@ -2,6 +2,7 @@ package com.janiotech.taskflow.domain.entities;
 
 import com.janiotech.taskflow.domain.valueobjects.BirthDate;
 import com.janiotech.taskflow.domain.valueobjects.Email;
+import com.janiotech.taskflow.domain.valueobjects.Password;
 import com.janiotech.taskflow.domain.valueobjects.Phone;
 
 import java.time.LocalDate;
@@ -15,13 +16,13 @@ public class User {
     private Phone phone;
     private String username;
     private Email email;
-    private String password;
+    private Password password;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
     public User(){}
 
-    public User(String name, BirthDate birth, String gender, Phone phone, String username, Email email, String password){
+    public User(String name, BirthDate birth, String gender, Phone phone, String username, Email email, Password password){
         this.name = name;
         this.birth = birth;
         this.gender = gender;
@@ -83,11 +84,9 @@ public class User {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public Password getPassword() {return password;}
 
-    public void setPassword(String password) {
+    public void setPassword(Password password) {
         this.password = password;
     }
 
