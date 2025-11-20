@@ -1,10 +1,7 @@
 package tech.janio.taskflow.domain;
 
 import com.janiotech.taskflow.domain.entities.User;
-import com.janiotech.taskflow.domain.valueobjects.BirthDate;
-import com.janiotech.taskflow.domain.valueobjects.Email;
-import com.janiotech.taskflow.domain.valueobjects.Password;
-import com.janiotech.taskflow.domain.valueobjects.Phone;
+import com.janiotech.taskflow.domain.valueobjects.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -63,5 +60,12 @@ public class UserTest {
         Password passwordUser = new Password("Password3@");
         user.setPassword(passwordUser);
         assertEquals("Password3@", user.getPassword().toString());
+    }
+
+    @Test
+    public void UsernameUserTest(){
+         Username usernameUser = new Username("sanchez_123");
+         user.setUsername(usernameUser);
+         assertEquals("sanchez_123", user.getUsername().toString());
     }
 }
