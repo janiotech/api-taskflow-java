@@ -4,9 +4,10 @@ import com.janiotech.taskflow.domain.valueobjects.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class User {
-    private Long id;
+    private UUID id;
     private String name;
     private BirthDate birth;
     private String gender;
@@ -29,7 +30,7 @@ public class User {
         this.password = password;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return this.id;
     }
 
